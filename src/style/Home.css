@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+body {
+    background-color: #fffff0;
+    color: #fffff0;
+    text-align: center;
+}
+
+/* Hero Section */
+.hero-section {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    height: 100vh; /* Full viewport height */
+    position: relative;
+    overflow: hidden;
+    background-color: #420e54; /* Dark Purple */
+}
+
+.hero-content {
+    text-align: center; /* Center text */
+    z-index: 2; /* Ensure content is above the background */
+}
+
+.header-text {
+    color: #fffff0; /* Ivory */
+    font-size: 15em;
+    font-weight: 600;
+    letter-spacing: -0.009em;
+    position: relative;
+    animation: glow 2s infinite alternate; /* Glow animation */
+}
+.cta-button {
+    background-color: #ffffff; /* Change to desired color */
+    color: #420842;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease-in-out;
+}
+
+.cta-button:hover {
+    background-color: #573d6e; /* Slightly darker on hover */
+}
+
+@keyframes glow {
+    0% {
+        text-shadow: 0 0 5px #573d6e, 0 0 10px #8600ff, 0 0 20px #420842, 0 0 40px #ff00ff, 0 0 80px #ff6f61, 0 0 90px #ff6f61, 0 0 100px #ff6f61;
+    }
+    100% {
+        text-shadow: 0 0 10px #753c75, 0 0 20px #420842, 0 0 30px #420842, 0 0 50px #f602f6, 0 0 100px #ff6f61, 0 0 120px #ff6f61, 0 0 150px #ff6f61;
+    }
+}
+/* What We Do Section */
+.what-we-do {
+    padding: 50px;
+    text-align: center;
+    background-color: #ffffff;
+}
+.what-we-do h2{
+    text-align: center;
+    color: #ffffff;
+    font-size: 5em;
+    background: #8c638c;
+    border-radius: 50px;
+}
+.what-we-do p{
+    font-size: 1.5em;
+    color: #420842;
+}
+
+p {
+    color: #420e54;
+    color: rgba(249, 249, 249, 0.53);
+    font-weight: 600;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bg {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1; /* Ensure background is behind content */
+}
+
+.bg > div {
+    position: absolute;
+    scale: 1.2;
+    opacity: 0.6;
+}
+
+.bg > div:nth-child(1) {
+    width: 100%;
+    height: 100%;
+    border-radius: 100em;
+    box-shadow:
+            inset 0 0 4em 3em purple, /* Ivory */
+            inset 0 0 2em 0.4em plum, /* Ivory */
+            0 0 0.1em 0.1em #420842, /* Ivory */
+            0 0 1em 0.4em white; /* Ivory */
+    translate: 0 -70%;
+    animation: onloadbgt 1s ease-in-out forwards;
+}
+
+.bg > div:nth-child(2) {
+    width: 100%;
+    height: 100%;
+    border-radius: 100em;
+    box-shadow:
+            inset 0 0 4em 3em white, /* Ivory */
+            inset 0 0 2em 0.4em white, /* Ivory */
+            0 0 0.1em 0.1em beige, /* Ivory */
+            0 0 1em 0.4em beige; /* Ivory */
+    translate: 0 70%;
+    animation: onloadbgb 1s ease-in-out forwards;
+}
+
+@keyframes onloadbgt {
+    0% { translate: 0 -70%; opacity: 0.3; }
+    100% { translate: 0 -64%; opacity: 0.8; }
+}
+
+@keyframes onloadbgb {
+    0% { translate: 0 70%; opacity: 0.3; }
+    100% { translate: 0 64%; opacity: 0.8; }
+}
+
+/* Features Section */
+.features-section {
+    background-color: #420842;
+    padding: 50px;
+    text-align: center;
+}
+
+.features-grid {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.feature {
+    font-size: 1.2em;
+    width: 250px;
+    margin: 30px;
+    text-align: center;
+    color: white;
+}
+
+.feature-img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.feature-text {
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #ffffff; /* Dark Purple */
+}
+
+.feature-description {
+    font-size: 1em;
+    color: #aeadad;
+    margin-top: 10px;
+}
+
+/* Team Section */
+.team-section {
+    width: 100%;
+    padding: 50px;
+    background: #fffff0; /* Ivory */
+    color: #ffffff; /* Dark Purple */
+    text-align: center;
+}
+.team-section h2{
+    color: #420842;
+}
+.team-section p {
+    color: #c695c6;
+}
+.team-members {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Space between team members */
+    flex-wrap: wrap; /* Wrap to next row if screen is too small */
+}
+.team-members-role{
+    color: #420e54;
+}
+
+
+.team-member {
+    margin-top: 20px;
+    color: #420e54;
+    text-align: center;
+    width: 200px; /* Fixed width for each team member */
+    transition: transform 0.3s ease-in-out;
+}
+
+.team-member:hover {
+    transform: scale(1.1);
+}
+
+.team-img {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px;
+}
+
+/* Logo Section */
+.logo-section {
+    padding: 150px;
+    background: #420e54; /* Dark Purple */
+    color: #fffff0; /* Ivory */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px; /* Space between logo and description */
+}
+
+.logo-section img {
+    width: 350px; /* Logo size */
+    height: auto;
+    margin-right: 120px;
+
+}
+
+.logo-section .logo-description {
+    max-width: 500px;
+    text-align: left;
+}
+
+.logo-section .logo-description h2 {
+    font-size: 5em;
+    margin-bottom: 20px;
+}
+
+.logo-section .logo-description p {
+    font-size: 1.5em;
+    line-height: 1.6;
+}
+/* Navigation Bar */
+.navbar {
+    position: fixed; /* or absolute, depending on your layout */
+    top: 0;
+    height: 120px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    z-index: 1000;
+    background: transparent; /* Ensures the background is transparent */
+    box-shadow: none; /* Removes any shadows */
+    transition: background 0.3s ease-in-out;
+}
+.navbar .logo {
+    height: 220px;
+}
+/* Logo Image */
+.app-logo {
+    height: 220px; /* Increase size */
+    max-height: 100%; /* Ensure it fits inside the navbar */
+    object-fit: contain;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 1.1em;
+    font-weight: 500;
+    padding: 8px 15px;
+    transition: all 0.3s ease-in-out;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.1);
+}
+
+/* Underline Effect */
+.nav-links a::after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 3px;
+    transition: width 0.3s;
+    margin: auto;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
+}
+
+/* Responsive Navbar */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+        padding-top: 10px;
+    }
+
+    .nav-links a {
+        padding: 10px;
+        display: block;
+    }
+}
