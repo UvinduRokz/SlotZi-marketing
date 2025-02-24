@@ -1,6 +1,6 @@
 import React from 'react';
-import logo from "../assets/SlotZi1-removebg-preview.png";
 import logo2 from "../assets/SlotZifinal.png";
+import logo3 from "../assets/SlotZi1-removebg-preview.png";
 import team1 from "../assets/team1.png";
 import team2 from "../assets/team2.png";
 import team3 from "../assets/team3.png";
@@ -11,24 +11,24 @@ import menu from "../assets/menu.png";
 import seating from "../assets/seating.png";
 import reserve from "../assets/reserve.png";
 import organization from "../assets/organization.png";
+import { FaEnvelope, FaPhone, FaInstagram } from "react-icons/fa";
 
 import { motion } from 'framer-motion';
 import "../style/Home.css";
 
+
 const Home = () => {
     return (
         <div className="home-container">
-
             {/* Navigation Bar */}
             <nav className="navbar">
-                <div className="logo"><img src={logo} alt="App Logo" className="app-logo" />
-                </div>
+                <img src={logo3} alt="Logo" className="logo" />
                 <ul className="nav-links">
                     <li><a href="#hero">Home</a></li>
                     <li><a href="#what-we-do">What We Do</a></li>
                     <li><a href="#features">Features</a></li>
                     <li><a href="#team">Team</a></li>
-                    <li><a href="#contact">Contact Us</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
 
@@ -97,9 +97,12 @@ const Home = () => {
                 <div className="logo-description">
                     <h2>OUR LOGO</h2>
                     <p>
-                        Our logo represents innovation and trust. It was designed with simplicity and elegance in mind,
-                        using a combination of modern typography and symbolic elements to reflect our commitment to
-                        financial management and growth.
+                        The <b>SlotZi</b> logo represents booking time slots with a location pin,
+                        symbolizing reservations. The circle in the center highlights selecting
+                        a slot, while the clicking hand shows digital interaction. Radiating
+                        lines indicate real-time availability updates. The <b>"O" </b> in SLOTZI is
+                        designed as the booking symbol, reinforcing the app’s purpose. The purple
+                        color adds a professional and modern touch.
                     </p>
                 </div>
             </section>
@@ -135,8 +138,20 @@ const Home = () => {
             {/* Contact Us Section */}
             <section className="contact-section" id="contact">
                 <h2 className="section-title">Contact Us</h2>
-                <p>Email: slotzi@gmail.com</p>
-                <p>Phone: +94 71 667 2616</p>
+                <div className="contact-info">
+                    <div className="contact-item">
+                        <FaEnvelope className="icon email-icon" />
+                        <a href="mailto:slotzi@gmail.com" className="contact-link">slotzi@gmail.com</a>
+                    </div>
+                    <div className="contact-item">
+                        <FaPhone className="icon phone-icon" />
+                        <a href="tel:+94716672616" className="contact-link">+94 71 667 2616</a>
+                    </div>
+                    <div className="contact-item">
+                        <FaInstagram className="icon instagram-icon" />
+                        <a href="https://www.instagram.com/slotzi" target="_blank" rel="noopener noreferrer" className="contact-link">@slotzi</a>
+                    </div>
+                </div>
             </section>
         </div>
     );
