@@ -5,10 +5,9 @@ import './App.css';
 
 function App() {
     return (
-        <Router>
+        <Router basename="/SlotZi-marketing/">
             <Routes>
                 <Route path="/" element={<Home />} />
-                {/* Add more routes as needed */}
             </Routes>
         </Router>
     );
