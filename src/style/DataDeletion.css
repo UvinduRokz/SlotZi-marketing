@@ -1,0 +1,38 @@
+.dd-container {
+  padding: 40px;
+  max-width: 800px;
+  margin: auto;
+  font-family: Arial, sans-serif;
+}
+
+.dd-title {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #4b0082;
+}
+
+.dd-paragraph {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.dd-contact-email {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.dd-contact-email a {
+  color: #4b0082;
+  text-decoration: none;
+}
+
+.dd-contact-email a:hover {
+  text-decoration: underline;
+}
+
+.dd-last-updated {
+  margin-top: 40px;
+  font-size: 0.9rem;
+  color: #666;
+}
